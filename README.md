@@ -1,5 +1,8 @@
 <div align="center">
-  <img src="./banner.svg" width="100%" alt="Даниил Бабич — dnbbch" />
+  <picture>
+  <source media="(prefers-color-scheme: dark)" srcset="./banner-dark.svg" />
+  <img src="./banner-light.svg" width="100%" alt="Даниил Бабич — dnbbch" />
+</picture>
 </div>
 
 <div align="center">
@@ -16,18 +19,18 @@ Swift для iOS/macOS, интеграции LLM. Делаю продукты ц
 
 <div align="center">
 
-[![Python](https://img.shields.io/badge/Python-141210?style=flat-square&logo=python&logoColor=D97448)](https://dnbbch.dev)
-[![Django](https://img.shields.io/badge/Django-141210?style=flat-square&logo=django&logoColor=D97448)](https://dnbbch.dev)
-[![FastAPI](https://img.shields.io/badge/FastAPI-141210?style=flat-square&logo=fastapi&logoColor=D97448)](https://dnbbch.dev)
-[![React](https://img.shields.io/badge/React-141210?style=flat-square&logo=react&logoColor=D97448)](https://dnbbch.dev)
-[![Next.js](https://img.shields.io/badge/Next.js-141210?style=flat-square&logo=nextdotjs&logoColor=D97448)](https://dnbbch.dev)
-[![TypeScript](https://img.shields.io/badge/TypeScript-141210?style=flat-square&logo=typescript&logoColor=D97448)](https://dnbbch.dev)
-[![Tailwind](https://img.shields.io/badge/Tailwind-141210?style=flat-square&logo=tailwindcss&logoColor=D97448)](https://dnbbch.dev)
-[![Swift](https://img.shields.io/badge/Swift-141210?style=flat-square&logo=swift&logoColor=D97448)](https://dnbbch.dev)
-[![PostgreSQL](https://img.shields.io/badge/PostgreSQL-141210?style=flat-square&logo=postgresql&logoColor=D97448)](https://dnbbch.dev)
-[![Redis](https://img.shields.io/badge/Redis-141210?style=flat-square&logo=redis&logoColor=D97448)](https://dnbbch.dev)
-[![Docker](https://img.shields.io/badge/Docker-141210?style=flat-square&logo=docker&logoColor=D97448)](https://dnbbch.dev)
-[![OpenAI](https://img.shields.io/badge/LLM-141210?style=flat-square&logo=openai&logoColor=D97448)](https://dnbbch.dev)
+  <img src="https://cdn.simpleicons.org/python/C4562A" height="30" alt="Python" />&nbsp;&nbsp;
+  <img src="https://cdn.simpleicons.org/django/C4562A" height="30" alt="Django" />&nbsp;&nbsp;
+  <img src="https://cdn.simpleicons.org/fastapi/C4562A" height="30" alt="FastAPI" />&nbsp;&nbsp;
+  <img src="https://cdn.simpleicons.org/react/C4562A" height="30" alt="React" />&nbsp;&nbsp;
+  <img src="https://cdn.simpleicons.org/nextdotjs/C4562A" height="30" alt="Next.js" />&nbsp;&nbsp;
+  <img src="https://cdn.simpleicons.org/typescript/C4562A" height="30" alt="TypeScript" />&nbsp;&nbsp;
+  <img src="https://cdn.simpleicons.org/tailwindcss/C4562A" height="30" alt="Tailwind" />&nbsp;&nbsp;
+  <img src="https://cdn.simpleicons.org/swift/C4562A" height="30" alt="Swift" />&nbsp;&nbsp;
+  <img src="https://cdn.simpleicons.org/postgresql/C4562A" height="30" alt="PostgreSQL" />&nbsp;&nbsp;
+  <img src="https://cdn.simpleicons.org/redis/C4562A" height="30" alt="Redis" />&nbsp;&nbsp;
+  <img src="https://cdn.simpleicons.org/docker/C4562A" height="30" alt="Docker" />&nbsp;&nbsp;
+  <img src="https://cdn.simpleicons.org/openai/C4562A" height="30" alt="LLM" />
 
 </div>
 
