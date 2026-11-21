@@ -12,10 +12,17 @@ function banner({ glyphColor, nameColor, subColor, glyphBase, glyphAccent }) {
   let cells = '';
   for (let y = CH; y <= H; y += CH) {
     for (let x = CW; x <= W; x += CW) {
-      const r = rnd();
-      if (r < 0.5) continue;
+      // elliptical distance from the center: glyphs dissolve toward the
+      // edges instead of stopping at a hard rectangle boundary
+      const nx = (x - W / 2) / (W / 2);
+      const ny = (y - H / 2) / (H / 2);
+      const d = Math.sqrt(nx * nx * 0.72 + ny * ny * 1.15);
+      const p = Math.max(0, Math.min(1, 1.18 - d * 1.5 + (rnd() - 0.5) * 0.55));
+      if (rnd() > p) continue;
       const ch = RAMP[Math.floor(rnd() * RAMP.length)];
-      const op = r > 0.965 ? glyphAccent : glyphBase + rnd() * 0.14;
+      const fade = Math.max(0.35, 1 - d * 0.55); // edge glyphs also dimmer
+      const ar = rnd();
+      const op = (ar > 0.965 ? glyphAccent : glyphBase + rnd() * 0.14) * fade;
       cells += `<text x='${x}' y='${y}' fill='${glyphColor}' fill-opacity='${op.toFixed(2)}'>${ch}</text>`;
     }
   }
@@ -23,24 +30,22 @@ function banner({ glyphColor, nameColor, subColor, glyphBase, glyphAccent }) {
 <style>
 @font-face{font-family:'Bricolage';src:url(data:font/truetype;charset=utf-8;base64,${bricolage}) format('truetype');font-weight:800;}
 @font-face{font-family:'JB';src:url(data:font/woff2;base64,${jbmono}) format('woff2');}
-tspan, .g{font-family:'JB',ui-monospace,Menlo,Consolas,monospace;font-size:15px}
-.name{font-family:'Bricolage',sans-serif;font-weight:800;font-size:76px;letter-spacing:1px;fill:${nameColor}}
-.sub{font-family:'JB',ui-monospace,Menlo,Consolas,monospace;font-size:19px;letter-spacing:7px;fill:${subColor}}
+.g{font-family:'JB',ui-monospace,Menlo,Consolas,monospace;font-size:15px}
+.name{font-family:'Bricolage',sans-serif;font-weight:800;font-size:88px;letter-spacing:2px;fill:${nameColor}}
+.sub{font-family:'JB',ui-monospace,Menlo,Consolas,monospace;font-size:19px;letter-spacing:8px;fill:${subColor}}
 </style>
 <g class='g'>${cells}</g>
-<text x='${W/2}' y='152' text-anchor='middle' class='name'>Даниил Бабич</text>
-<text x='${W/2}' y='200' text-anchor='middle' class='sub'>dnbbch · full-stack developer</text>
+<text x='${W/2}' y='158' text-anchor='middle' class='name'>dnbbch</text>
+<text x='${W/2}' y='206' text-anchor='middle' class='sub'>fullstack developer</text>
 </svg>`;
 }
 
-// light GitHub theme: darker terracotta field, near-black name
 fs.writeFileSync('/tmp/dnbbch-profile/banner-light.svg', banner({
   glyphColor: '#C4562A', nameColor: '#171310', subColor: '#C4562A',
   glyphBase: 0.12, glyphAccent: 0.42,
 }));
-// dark GitHub theme: brighter terracotta field, warm off-white name
 fs.writeFileSync('/tmp/dnbbch-profile/banner-dark.svg', banner({
   glyphColor: '#D97448', nameColor: '#f2ede6', subColor: '#D97448',
   glyphBase: 0.16, glyphAccent: 0.6,
 }));
-console.log('written', fs.statSync('/tmp/dnbbch-profile/banner-light.svg').size, fs.statSync('/tmp/dnbbch-profile/banner-dark.svg').size);
+console.log('ok');
