@@ -32,7 +32,7 @@ function banner({ glyphColor, nameColor, subColor, glyphBase, glyphAccent }) {
 @font-face{font-family:'JB';src:url(data:font/woff2;base64,${jbmono}) format('woff2');}
 .g{font-family:'JB',ui-monospace,Menlo,Consolas,monospace;font-size:15px}
 .name{font-family:'Bricolage',sans-serif;font-weight:800;font-size:88px;letter-spacing:2px;fill:${nameColor}}
-.sub{font-family:'JB',ui-monospace,Menlo,Consolas,monospace;font-size:19px;letter-spacing:8px;fill:${subColor}}
+.sub{font-family:'JB',ui-monospace,Menlo,Consolas,monospace;font-size:19px;letter-spacing:3px;fill:${subColor}}
 </style>
 <g class='g'>${cells}</g>
 <text x='${W/2}' y='158' text-anchor='middle' class='name'>dnbbch</text>
