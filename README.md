@@ -30,7 +30,7 @@ Swift для iOS/macOS, интеграции LLM. Делаю продукты ц
   <img src="https://cdn.simpleicons.org/postgresql/C4562A" height="30" alt="PostgreSQL" />&nbsp;&nbsp;
   <img src="https://cdn.simpleicons.org/redis/C4562A" height="30" alt="Redis" />&nbsp;&nbsp;
   <img src="https://cdn.simpleicons.org/docker/C4562A" height="30" alt="Docker" />&nbsp;&nbsp;
-  <img src="https://cdn.simpleicons.org/openai/C4562A" height="30" alt="LLM" />
+  <img src="https://cdn.simpleicons.org/googlegemini/C4562A" height="30" alt="LLM" />
 
 </div>
 
