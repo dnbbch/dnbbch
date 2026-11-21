@@ -13,6 +13,10 @@
 
 </div>
 
+Full-stack: Python/Django and FastAPI on the backend, React and Next.js on
+the frontend, Swift for iOS/macOS, LLM integrations. I build products end
+to end — from idea and architecture to production.
+
 Полный стек — Python/Django и FastAPI на бэке, React и Next.js на фронте,
 Swift для iOS/macOS, интеграции LLM. Делаю продукты целиком: от идеи и
 архитектуры до прода.
