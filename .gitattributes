@@ -1,2 +1,3 @@
+# linguist: keep code-gen assets out of the language bar
 *.svg linguist-vendored
 gen-banner.js linguist-vendored
